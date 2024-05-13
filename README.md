@@ -1,21 +1,23 @@
-# termdbg
+# termdebug
 
-Termdbg is a terminal debugger plugin for vim 8.1+ and neovim 0.3.6+.  
-Currently, termdbg supports
-- pdb (pdb3)
+`Termdebug` 是一个基于vim终端模拟器(vim 8.1+ 或 neovim 0.3.6+)的调试插件。
+
+当前, termdbg支持
+- pdb (pdb3) 
 - ipdb (ipdb3)
 - lldb
 - dlv (go Delve)
 
-If you need gdb support, try termdebug (`:h termdebug`)
+如果你需要gdb支持, 请尝试termdebug (`:h termdebug`)
 
-Currently, termdbg just only do these things:
-- locate cursor to current running line when debugger
-- simply toggle breakpoints in buffer
+当前, termdbg支持以下功能:
 
-## Install
+- 当调试时, 将光标定位到当前运行行
+- 简单的在buffer中切换断点
 
-> Need vim 8.1+ (+terminal) and neovim 0.3.6+.
+## 安装
+
+> 需要vim 8.1+ (+terminal) 和 neovim 0.3.6+.
 
 ### vim-plug
 
@@ -28,24 +30,22 @@ Plug 'IammyselfYBX/termdbg'
 - Extract the files and put them in your .vim directory
   (usually `~/.vim`).
 
-## Usage
+## 使用
 
-Usage: `Termdbg {debugger} {file} [args]`
+使用: `Termdbg {debugger} {file} [args]`
 
-Example: `Termdbg ipdb3 a.py`
+例子: `Termdbg ipdb3 a.py`
 
 ## Commands
 
-- `:TNext` Step over
-- `:TStep` Step in
-- `:TFinish` Return from current function
-- `:TContinue` Continue
-- `:TLocateCursor` Locate cursor to running line
-- `:TToggleBreak` Toggle breakpoint in current line
-- `:TSendCommand` Send command to debugger
+- `:TNext` 跳过当前行
+- `:TStep` 进入当前行
+- `:TFinish` 返回当前函数
+- `:TContinue` 运行到下一个断点
+- `:TLocateCursor` 将光标定位到当前运行行
+- `:TToggleBreak` 在当前行切换断点
+- `:TSendCommand` 发送命令到调试器
 
 
-## Options
-None.
 
 
